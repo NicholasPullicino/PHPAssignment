@@ -10,7 +10,7 @@
         <!-- Bootstrap JavaScript Bundles -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        
+
         <!-- Custom CSS -->
         <link rel="stylesheet" href="style.css"></script>
 
@@ -19,10 +19,26 @@
     <body>
         <?php
             include "../templates/header.php";
-            include "../includes/games-inc.php";
-        ?>
-        
-        <div style="clear: both"></div>
+            include "../includes/game-inc.php";
+          ?>
+
+          <div class='col-md-8 col-lg-7 mt-1'>
+          <article class='profile-box'>
+          <form method='post' action='game.php'>
+              <figure class='floating-image float-start mb-3 me-3'>
+                  <h1 class='h1'><img src='../images/"<?php echo $image; ?>"' alt=''/><?php echo $name; ?></h1>
+              </figure>
+              <p><?php echo $desc; ?></p>
+              <input type='hidden' name='hidden_id' value="<?php echo $id; ?>">
+              <input type='hidden' name='hidden_name' value="<?php echo $name;?>">
+              <input type='hidden' name='hidden_desc' value="<?php echo $desc;?>">
+              <input type='text' name='item_quantity' class='form-control' value='1'>
+              <button type='submit' name='submit' value='add' class='btn btn-primary'>Add to Cart</button>
+          </form>
+          </article>
+          </div>
+
+          <div style="clear: both"></div>
         <h3 class="title2">Shopping Cart Details</h3>
         <div class="table-responsive">
             <table class="table table-bordered">
@@ -62,6 +78,7 @@
                 ?>
             </table>
         </div>
+
 
         <?php
             include "../templates/footer.php";

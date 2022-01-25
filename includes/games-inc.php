@@ -54,15 +54,15 @@
             $image = $row["image"];
             echo "<div class='col-md-8 col-lg-7 mt-1'>
             <article class='profile-box'>
-            <form method='post' action='games-inc.php?action=add&id=".$row[$id]."'>
+            <form method='post' action='../Website/game.php'>
                 <figure class='floating-image float-start mb-3 me-3'>
                     <h1 class='h1'><img src='../images/". $image ."' alt=''/>" . $name . "</h1>
                 </figure>
                 <p>" . $desc . "</p>
+                <input type='hidden' name='hidden_id' value=".$id.">
                 <input type='hidden' name='hidden_name' value=".$row["name"]."'>
-                <input type='hidden' name='hidden_desc' value=".$row["descrip"]."'>
-                <input type='text' name='quantity' class='form-control' value='1'>
-                <input type='submit' name='add' class='btn btn-primary' value='Add to Cart'>
+                <input type='hidden' name='hidden_desc' value=".$desc."'>
+                <button type='submit' name='submit' class='btn btn-primary'>View</button>
             </form>
             </article>
         </div>";
@@ -82,45 +82,6 @@
         echo "</ul>
         </aside>";
 
-        if (isset($_POST["add"])){
-            if (isset($_SESSION["cart"])){
-                $item_array_id = array_column($_SESSION["cart"],"product_id");
-                if (!in_array($_GET["id"],$item_array_id)){
-                    $count = count($_SESSION["cart"]);
-                    $item_array = array(
-                        'product_id' => $_GET[$id],
-                        'item_name' => $_POST["hidden_name"],
-                        'item_desc' => $_POST["hidden_desc"],
-                        'item_quantity' => $_POST["quantity"],
-                    );
-                    $_SESSION["cart"][$count] = $item_array;
-                    echo '<script>window.location="../Website/gamelist.php"</script>';
-                }else{
-                    echo '<script>alert("Product is already Added to Cart")</script>';
-                    echo '<script>window.location="../Website/gamelist.php"</script>';
-                }
-            }else{
-                $item_array = array(
-                    'product_id' => $_GET[$id],
-                    'item_name' => $_POST["hidden_name"],
-                    'item_desc' => $_POST["hidden_desc"],
-                    'item_quantity' => $_POST["quantity"],
-                );
-                $_SESSION["cart"][0] = $item_array;
-            }
-        }
-    
-        if (isset($_GET["action"])){
-            if ($_GET["action"] == "delete"){
-                foreach ($_SESSION["cart"] as $keys => $value){
-                    if ($value["product_id"] == $_GET["id"]){
-                        unset($_SESSION["cart"][$keys]);
-                        echo '<script>alert("Product has been Removed...!")</script>';
-                        echo '<script>window.location="../Website/gamelist.php"</script>';
-                    }
-                }
-            }
-        }
     }
 
 ?>
