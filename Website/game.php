@@ -20,25 +20,25 @@
         <?php
             include "../templates/header.php";
             include "../includes/game-inc.php";
-          ?>
+        ?>
 
-          <div class='col-md-8 col-lg-7 mt-1'>
-          <article class='profile-box'>
-          <form method='post' action='game.php'>
-              <figure class='floating-image float-start mb-3 me-3'>
-                  <h1 class='h1'><img src='../images/"<?php echo $image; ?>"' alt=''/><?php echo $name; ?></h1>
-              </figure>
-              <p><?php echo $desc; ?></p>
-              <input type='hidden' name='hidden_id' value="<?php echo $id; ?>">
-              <input type='hidden' name='hidden_name' value="<?php echo $name;?>">
-              <input type='hidden' name='hidden_desc' value="<?php echo $desc;?>">
-              <input type='text' name='item_quantity' class='form-control' value='1'>
-              <button type='submit' name='submit' value='add' class='btn btn-primary'>Add to Cart</button>
-          </form>
-          </article>
-          </div>
+        <div class='col-md-8 col-lg-7 mt-1'>
+        <article class='profile-box'>
+        <form method='post' action='game.php'>
+            <figure class='floating-image float-start mb-3 me-3'>
+                <h1 class='h1'><img src='../images/"<?php echo $image; ?>"' alt=''/><?php echo $name; ?></h1>
+            </figure>
+            <p><?php echo $desc; ?></p>
+            <input type='hidden' name='hidden_id' value="<?php echo $id; ?>">
+            <input type='hidden' name='hidden_name' value="<?php echo $name;?>">
+            <input type='hidden' name='hidden_desc' value="<?php echo $desc;?>">
+            <input type='text' name='item_quantity' class='form-control' value='1'>
+            <button type='submit' name='submit' value='add' class='btn btn-primary'>Add to Cart</button>
+        </form>
+        </article>
+        </div>
 
-          <div style="clear: both"></div>
+        <div style="clear: both"></div>
         <h3 class="title2">Shopping Cart Details</h3>
         <div class="table-responsive">
             <table class="table table-bordered">
