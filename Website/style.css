@@ -311,21 +311,22 @@ a:hover {
 
 table, th, tr{
     text-align: center;
+    background-color: #0c0704;
 }
 .title2{
     text-align: center;
     color: #66afe9;
-    background-color: #efefef;
+    background-color: #0c0704;
     padding: 2%;
 }
 h2{
     text-align: center;
     color: #66afe9;
-    background-color: #efefef;
+    background-color: #0c0704;
     padding: 2%;
 }
 table th{
-    background-color: #efefef;
+    background-color: #0c0704;
 }
 
 #respond {

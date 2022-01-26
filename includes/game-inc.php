@@ -6,13 +6,15 @@ require_once "functions-inc.php";
 $id = $_GET["id"];
 
 $resultData = loadGame($conn, $id);
-$row = mysqli_fetch_assoc($resultsData);
-$name = $row["name"];
-$desc = $row["descrip"];
+//$row = mysqli_fetch_assoc($resultData);
+$name = $resultData["name"];
+$desc = $resultData["descrip"];
 
 
 if (isset($_POST["add"])){
+    echo "test";
     if (isset($_SESSION["cart"])){
+        echo "test";
         $item_array_id = array_column($_SESSION["cart"],"product_id");
         if (!in_array($_GET["id"],$item_array_id)){
             $count = count($_SESSION["cart"]);
@@ -23,10 +25,10 @@ if (isset($_POST["add"])){
                 'item_quantity' => $_POST["quantity"],
             );
             $_SESSION["cart"][$count] = $item_array;
-            echo '<script>window.location="../Website/gamelist.php"</script>';
+            echo '<script>window.location="../Website/game.php"</script>';
         }else{
             echo '<script>alert("Product is already Added to Cart")</script>';
-            echo '<script>window.location="../Website/gamelist.php"</script>';
+            echo '<script>window.location="../Website/game.php"</script>';
         }
     }else{
         $item_array = array(
@@ -45,7 +47,7 @@ if (isset($_GET["action"])){
             if ($value["product_id"] == $_GET["id"]){
                 unset($_SESSION["cart"][$keys]);
                 echo '<script>alert("Product has been Removed...!")</script>';
-                echo '<script>window.location="../Website/gamelist.php"</script>';
+                echo '<script>window.location="../Website/game.php"</script>';
             }
         }
     }

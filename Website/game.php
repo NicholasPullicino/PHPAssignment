@@ -24,7 +24,7 @@
 
         <div class='col-md-8 col-lg-7 mt-1'>
         <article class='profile-box'>
-        <form method='post' action='game.php'>
+        <form method='post' action='game.php?id=<?php echo $id;?>'>
             <figure class='floating-image float-start mb-3 me-3'>
                 <h1 class='h1'><img src='../images/"<?php echo $image; ?>"' alt=''/><?php echo $name; ?></h1>
             </figure>
