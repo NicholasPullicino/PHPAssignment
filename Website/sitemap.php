@@ -30,7 +30,7 @@
                     <a href="index.php" class="card-link text-center">Home Page</a>
                 </div>
                 <div class="col-12">
-                    <a href="store.php" class="card-link text-center">Store Page</a>
+                    <a href="gamelist.php" class="card-link text-center">Store Page</a>
                 </div>
                 <div class="col-12">
                     <a href="news.php" class="card-link text-center">News Page</a>

@@ -21,7 +21,7 @@ if (isset($_POST["submit"])){
                 'product_id' => $_GET[$id],
                 'item_name' => $_POST["hidden_name"],
                 'item_desc' => $_POST["hidden_desc"],
-                'item_quantity' => $_POST["quantity"],
+                'item_quantity' => $_POST["item_quantity"],
             );
             $_SESSION["cart"][$count] = $item_array;
             header("Location: ../Website/game.php?id=".$id."");

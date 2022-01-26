@@ -91,7 +91,7 @@
 
                 <h3>Leave a Comment</h3>
         
-                <form action="post_comment.php" method="post" id="commentform">>
+                <form action="post_comment.php" method="post" id="commentform">
             
                     <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
             
@@ -165,7 +165,7 @@
 
                 <h3>Leave a Comment</h3>
         
-                <form action="post_comment.php" method="post" id="commentform">>
+                <form action="post_comment.php" method="post" id="commentform">
             
                     <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
             

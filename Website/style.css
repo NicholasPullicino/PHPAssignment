@@ -186,16 +186,11 @@ color: whitesmoke;
     color: #fff;
 }
 
-h3{
-    text-decoration: underline;
-    color: #fff
-}
-
 h4{
     padding: 10px;
 }
 
-p{
+p, h3{
     color:#fff;
 }
 
@@ -311,25 +306,30 @@ a:hover {
 
 table, th, tr{
     text-align: center;
-    background-color: #222222;
+    background-color: #040C1D;
+}
+
+td{
+    color: #ffffff;
 }
 
 .title2{
     text-align: center;
-    color: #868686;
-    background-color: #0c0704;
+    color: #ffffff;
+    background-color: #161616;
     padding: 2%;
 }
 
 h2{
     text-align: center;
-    color: #66afe9;
-    background-color: #0c0704;
+    color: #fafafa;
+    background-color: #d19bb6;
     padding: 2%;
 }
 
 table th{
-    background-color: #0c0704;
+    background-color: #000000;
+    color: #fafafa;
 }
 
 #respond {

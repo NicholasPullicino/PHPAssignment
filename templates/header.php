@@ -29,16 +29,15 @@
                         <a href='../Website/profile.php' class='nav-link'>Profile</a>
                     </li>";
                 echo "<li class='nav-item'>
-                        <a href='cart.php' class='nav-item nav-link active'>
+                        <a href='gamelist.php' class='nav-item nav-link active'>
                         <h5 class='px-5 cart'>
-
-                        <i class='fas fa-shopping-cart'></i> Cart";
+                        <i class='fas fa-shopping-cart'></i> Cart ";
 
                     if (isset($_SESSION['cart'])){
                         $count = count($_SESSION['cart']);
-                        echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
+                        echo "<span id=\"cart_count\" class=\"text-warning\">$count</span>";
                     }else{
-                        echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
+                        echo "<span id=\"cart_count\" class=\"text-warning\">0</span>";
                     }
                     echo "
                 </h5>

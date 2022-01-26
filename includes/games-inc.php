@@ -62,7 +62,7 @@
                 <input type='hidden' name='hidden_id' value=".$id.">
                 <input type='hidden' name='hidden_name' value=".$row["name"]."'>
                 <input type='hidden' name='hidden_desc' value=".$desc."'>
-                <button type='submit' name='submit' class='btn btn-primary'>View</button>
+                <button type='submit' class='btn btn-primary'>View</button>
             </form>
             </article>
         </div>";

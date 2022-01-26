@@ -22,7 +22,7 @@
             include "../includes/game-inc.php";
         ?>
 
-        <div class='col-md-8 col-lg-7 mt-1'>
+        <div class='col-md-8 col-lg-9 mt-3 mb-3'>
         <article class='profile-box'>
         <form method='post' action='game.php?id=<?php echo $id;?>'>
             <figure class='floating-image float-start mb-3 me-3'>
@@ -33,6 +33,7 @@
             <input type='hidden' name='hidden_name' value="<?php echo $name;?>">
             <input type='hidden' name='hidden_desc' value="<?php echo $desc;?>">
             <input type='text' name='item_quantity' class='form-control' value='1'>
+            <p></p>
             <button type='submit' name='submit' value='add' class='btn btn-primary'>Add to Cart</button>
         </form>
         </article>
