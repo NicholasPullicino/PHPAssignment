@@ -203,6 +203,23 @@
         return $resultData;
     }
 
+    function loadGame($conn, $id) {
+        $sql = "SELECT * FROM games WHERE gameID = ?;";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt,$sql)){
+            header("location: ../Website/users.php?error=stmtfailed");
+            exit();
+        }
+
+        mysqli_stmt_bind_param($stmt, "s", $id);
+        mysqli_stmt_execute($stmt);
+
+        $resultData = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+
+        return $resultData;
+    }
+
     function loadGamesLimit($conn, $start, $amount) {
         $sql = "SELECT * FROM games LIMIT ?, ?;";
         $stmt = mysqli_stmt_init($conn);

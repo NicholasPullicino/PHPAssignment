@@ -54,7 +54,7 @@
             $image = $row["image"];
             echo "<div class='col-md-8 col-lg-7 mt-1'>
             <article class='profile-box'>
-            <form method='post' action='../Website/game.php'>
+            <form method='post' action='../Website/game.php?id=1'>
                 <figure class='floating-image float-start mb-3 me-3'>
                     <h1 class='h1'><img src='../images/". $image ."' alt=''/>" . $name . "</h1>
                 </figure>

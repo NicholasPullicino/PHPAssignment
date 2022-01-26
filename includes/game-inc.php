@@ -1,7 +1,10 @@
 <?php 
 
+require_once "dbh-inc.php";
+require_once "functions-inc.php";
+
 if (isset($_POST["submit"])) {
-    $id = $_POST["hidden_id"];
+    $id = $_GET["id"];
     $name = $_POST["hidden_name"];
     $desc = $_POST["hidden_desc"];
 }
