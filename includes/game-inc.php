@@ -10,11 +10,10 @@ $resultData = loadGame($conn, $id);
 $name = $resultData["name"];
 $desc = $resultData["descrip"];
 
-
-if (isset($_POST["add"])){
-    echo "test";
+if (isset($_POST["submit"])){
+    //echo "test";
     if (isset($_SESSION["cart"])){
-        echo "test";
+        //echo "test";
         $item_array_id = array_column($_SESSION["cart"],"product_id");
         if (!in_array($_GET["id"],$item_array_id)){
             $count = count($_SESSION["cart"]);
@@ -25,10 +24,10 @@ if (isset($_POST["add"])){
                 'item_quantity' => $_POST["quantity"],
             );
             $_SESSION["cart"][$count] = $item_array;
-            echo '<script>window.location="../Website/game.php"</script>';
+            header("Location: ../Website/game.php?id=".$id."");
         }else{
             echo '<script>alert("Product is already Added to Cart")</script>';
-            echo '<script>window.location="../Website/game.php"</script>';
+            header("Location: ../Website/game.php?id=".$id."");
         }
     }else{
         $item_array = array(
@@ -44,10 +43,10 @@ if (isset($_POST["add"])){
 if (isset($_GET["action"])){
     if ($_GET["action"] == "delete"){
         foreach ($_SESSION["cart"] as $keys => $value){
-            if ($value["product_id"] == $_GET["id"]){
+            if ($value["product_id"] == $_GET[$id]){
                 unset($_SESSION["cart"][$keys]);
                 echo '<script>alert("Product has been Removed...!")</script>';
-                echo '<script>window.location="../Website/game.php"</script>';
+                header("Location: ../Website/game.php?id=".$id."");
             }
         }
     }
