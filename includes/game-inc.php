@@ -18,7 +18,7 @@ if (isset($_POST["submit"])){
         if (!in_array($_GET["id"],$item_array_id)){
             $count = count($_SESSION["cart"]);
             $item_array = array(
-                'product_id' => $_GET[$id],
+                'product_id' => $_POST["hidden_id"],
                 'item_name' => $_POST["hidden_name"],
                 'item_desc' => $_POST["hidden_desc"],
                 'item_quantity' => $_POST["item_quantity"],
@@ -31,7 +31,7 @@ if (isset($_POST["submit"])){
         }
     }else{
         $item_array = array(
-            'product_id' => $_GET[$id],
+            'product_id' => $_POST["hidden_id"],
             'item_name' => $_POST["hidden_name"],
             'item_desc' => $_POST["hidden_desc"],
             'item_quantity' => $_POST["quantity"],
@@ -42,8 +42,9 @@ if (isset($_POST["submit"])){
 
 if (isset($_GET["action"])){
     if ($_GET["action"] == "delete"){
+        session_start();
         foreach ($_SESSION["cart"] as $keys => $value){
-            if ($value["product_id"] == $_GET[$id]){
+            if ($value["hidden_id"] == $_GET[$id]){
                 unset($_SESSION["cart"][$keys]);
                 echo '<script>alert("Product has been Removed...!")</script>';
                 header("Location: ../Website/game.php?id=".$id."");
