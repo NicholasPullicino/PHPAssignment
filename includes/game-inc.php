@@ -3,11 +3,13 @@
 require_once "dbh-inc.php";
 require_once "functions-inc.php";
 
-if (isset($_POST["submit"])) {
-    $id = $_GET["id"];
-    $name = $_POST["hidden_name"];
-    $desc = $_POST["hidden_desc"];
-}
+$id = $_GET["id"];
+
+$resultData = loadGame($conn, $id);
+$row = mysqli_fetch_assoc($resultsData);
+$name = $row["name"];
+$desc = $row["descrip"];
+
 
 if (isset($_POST["add"])){
     if (isset($_SESSION["cart"])){
