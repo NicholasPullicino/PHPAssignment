@@ -57,7 +57,7 @@
                             <td><?php echo $value["item_name"]; ?></td>
                             <td><?php echo $value["item_quantity"]; ?></td>
                             <td><?php echo $value["item_desc"]; ?></td>
-                            <td><a href="../includes/game-inc.php?action=delete&id=<?php echo $id;?>"><span
+                            <td><a href="../includes/game-inc.php?action=delete&id=<?php echo $value["product_id"];?>"><span
                                         class="text-danger">Remove Item</span></a></td>
                         <?php
                     }
