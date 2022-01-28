@@ -8,7 +8,6 @@
     if (!isset($_POST["submit"]))
     {
         if (isset($_SESSION["username"])) {
-            print_r($_SESSION);
             $username = $_SESSION["username"];
             $user = userExists($conn, $username, $username);
             $email = $user["email"];

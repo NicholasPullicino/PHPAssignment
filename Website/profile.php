@@ -27,7 +27,16 @@
             <div class="col-md-8 col-lg-9 profile-desc profile-info">
                 <article class="profile-box profile-info">
                     <header>
-                        <?php echo"<h1 class='h1'><img src='../images/" . $image . "' alt='Profile Icon'/>" . $username . " </h1>"; ?>
+                    <div class="">
+                            <figure class="profile-circle mb-0">
+                                <div class="thumbnail w-30">
+                                    <div class="thumbnail-inner">
+                                    <?php echo"<img class='full-bg' src='../images/" . $image . "' alt='Profile Icon'/>"; ?>                                 
+                                    </div>
+                                    <?php echo"<h1 class='h1'>" . $username . " </h1>"; ?>
+                                </div>
+                            </figure>
+                    </div>
                     </header>
 
                     <div class="item-content clearfix my-2">
