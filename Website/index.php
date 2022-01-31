@@ -30,13 +30,13 @@
     </ol>
     <div class="carousel-inner">
     <div class="carousel-item active">
-        <img class="d-block w-100" src="../images/fallout3.jpg" alt="First game">
+        <img class="d-block w-100" src="../images/dying2.jpg" alt="First game">
     </div>
     <div class="carousel-item">
-        <img class="d-block w-100" src="../images/fallout2.jpg" alt="Second game">
+        <img class="d-block w-100" src="../images/aubanner.jpg" alt="Second game">
     </div>
     <div class="carousel-item">
-        <img class="d-block w-100" src="../images/fallout3.jpg" alt="Third game">
+        <img class="d-block w-100" src="../images/ff.png" alt="Third game">
     </div>
     </div>
     <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -98,9 +98,9 @@
         <div class="col-12">
             <div class="container-fluid">
                 <div class="row grid-container3">
-                    <a href="store.php"><div class="grid-item3 full-bg" style="background-image: url(../images/outerworlds.jpg);"></div></a> 
-                    <a href="store.php"><div class="grid-item3 full-bg" style="background-image: url(../images/It-Takes-Two.jpg);"></div></a>
-                    <a href="store.php"><div class="grid-item3 full-bg" style="background-image: url(../images/beforeyoureyes.jpeg);"></div></a>
+                    <a href="gamelist.php"><div class="grid-item3 full-bg" style="background-image: url(../images/outerworlds.jpg);"></div></a> 
+                    <a href="gamelist.php"><div class="grid-item3 full-bg" style="background-image: url(../images/It-Takes-Two.jpg);"></div></a>
+                    <a href="gamelist.php"><div class="grid-item3 full-bg" style="background-image: url(../images/beforeyoureyes.jpeg);"></div></a>
                 </div>
             </div>
         </div>

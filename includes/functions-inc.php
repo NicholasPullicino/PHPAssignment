@@ -172,19 +172,19 @@
         //echo $hashedPassword, $checkPassword;
         //exit();
 
-        //if ($checkPassword === false){
-            //header("location: ../Website/login.php?error=incorrectlogin");
-            //echo $checkPassword;
-            //exit();
-        //}
-        //elseif($checkPassword === true){
+        if ($checkPassword === false){
+            header("location: ../Website/login.php?error=incorrectlogin");
+            echo $checkPassword;
+            exit();
+        }
+        elseif($checkPassword === true){
             session_start();            
             $_SESSION["userID"] = $userExists["userID"];
             $_SESSION["username"] = $userExists["username"];
 
             header("location: ../Website/profile.php");
             exit();
-        //}
+        }
     }
 
     function loadGames($conn) {
