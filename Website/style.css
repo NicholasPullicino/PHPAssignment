@@ -99,6 +99,7 @@ footer {
 #footerText{
     text-align: center;
     margin-bottom: 5px;
+    color: #fff;
 }
 
 .nav-item:hover{
@@ -109,8 +110,15 @@ footer {
     color: #d32c48;
 }
 
+.newsPost p{
+    background-color: #180c07;
+    color: #fff;
+}
+
 .newsPost{
     background-color: #180c07;
+    padding: 20px;
+    color: #fff;
 }
 
 .col-7{
@@ -190,12 +198,12 @@ h4{
     padding: 10px;
 }
 
-p, h3{
+h3{
     color:#fff;
 }
 
-.newsPost{
-    padding: 20px;
+p{
+    color: #000000;
 }
 
 #Page2{
@@ -225,6 +233,10 @@ p, h3{
     border-radius: 5px;
     border: 2px solid #b9b9b9;
     padding: 20px;
+}
+
+.profile-box p{
+    color: #fff;
 }
 
 .profile-info{
